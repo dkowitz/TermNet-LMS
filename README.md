@@ -24,7 +24,7 @@ It streams responses in real-time, executes tools one at a time, and maintains c
   Tracks the agent’s planning, actions, observations, reflections, and errors across multiple steps.
 
 - ⚡ **Streaming LLM output**  
-  Integrates with [Ollama](https://ollama.ai) for real-time streaming chat responses.
+  Integrates with [LM Studio](https://lmstudio.ai) for real-time streaming chat responses.
 
 - 🛡️ **Safety layer**  
   Risky commands (e.g., `rm`, `chmod`, `mv`) are not blocked, but the agent provides clear warnings before running them.
@@ -55,7 +55,7 @@ termnet/
 ### Requirements
 
 - Python **3.9+**
-- [Ollama](https://ollama.ai) running locally or accessible via API
+- [LM Studio](https://lmstudio.ai) running locally or accessible via API
 - Chromium (installed automatically by Playwright)
 
 ### Setup
@@ -132,7 +132,7 @@ Configuration is stored in `config.json`.
 
 | Key                | Description                                                                 |
 |--------------------|-----------------------------------------------------------------------------|
-| `OLLAMA_URL`       | Base URL for the Ollama server (default: `http://127.0.0.1:11434`)          |
+| `OLLAMA_URL`       | Base URL for the LM Studio server (default: `http://127.0.0.1:1234/v1/`)          |
 | `MODEL_NAME`       | The model name/tag to use (e.g., `gpt-oss:20b`)                             |
 | `LLM_TEMPERATURE`  | Randomness in responses (0 = deterministic, 1 = creative)                   |
 | `MAX_AI_STEPS`     | Maximum reasoning/tool-execution steps per user query                       |
